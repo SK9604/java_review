@@ -5,6 +5,7 @@ public class Elvis {
 	private Elvis() {
 		
 	}
+	public static Elvis getInstance() { return INSTANCE;}
 	public void leaveTheBuilding() {
 		
 	}
