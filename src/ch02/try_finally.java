@@ -9,9 +9,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class try_finally {
-	static String firstLineOfFile(String path) throws IOException {
+	static String firstLineOfFile(String path, String defaultVal) {
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){
 			return br.readLine();
+		} catch (IOException e) {
+			return defaultVal;
 		}
 	}
 	static void copy(String src, String dst) throws IOException{
