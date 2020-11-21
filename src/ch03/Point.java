@@ -8,13 +8,13 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-
+    
     @Override public boolean equals(Object o) {
-        if (!(o instanceof Point))
-            return false;
-        Point p = (Point)o;
-        return p.x == x && p.y == y;
-    }
+      if (o == null || o.getClass() != getClass())
+          return false;
+      Point p = (Point) o;
+      return p.x == x && p.y == y;
+  }
 
     @Override public int hashCode()  {
         return 31 * x + y;
