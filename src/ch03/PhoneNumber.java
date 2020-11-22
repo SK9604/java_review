@@ -24,4 +24,10 @@ public final class PhoneNumber {
         return pn.lineNum == lineNum && pn.prefix == prefix
                 && pn.areaCode == areaCode;
     }
+
+    public static void main(String[] args) {
+        Map<PhoneNumber, String> m = new HashMap<>();
+        m.put(new PhoneNumber(707, 867, 5309), "Jenny");
+        System.out.println(m.get(new PhoneNumber(707, 867, 5309)));
+    }
 }
